@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace FileDownLoadSystem.Core.EFDbContext
 {
+    /// <summary>
+    /// EFCore对数据库操作的上下文
+    /// </summary>
     public class FileDownLoadSystemDbContext: DbContext,IDenpendency
     {
         public FileDownLoadSystemDbContext()
