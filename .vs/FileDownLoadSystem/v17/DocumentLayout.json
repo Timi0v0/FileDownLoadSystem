@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\extensions\\autofacservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\extensions\\autofacservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|solutionrelative:filedownloadsystem.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\extensions\\idenpendency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\extensions\\idenpendency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\efdbcontext\\filedownloadsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\efdbcontext\\filedownloadsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F81C7B42-379B-40BA-95FC-BEF58A5D4C46}|FileDownLoadSystem.System\\FileDownLoadSystem.System.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.system\\irespositories\\ifilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F81C7B42-379B-40BA-95FC-BEF58A5D4C46}|FileDownLoadSystem.System\\FileDownLoadSystem.System.csproj|solutionrelative:filedownloadsystem.system\\irespositories\\ifilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|solutionrelative:filedownloadsystem.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\configuration\\appsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\configuration\\appsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|solutionrelative:filedownloadsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744A52B0-5895-4E19-AA71-10DBA8B771FC}|FileDownLoadSystem.API\\FileDownLoadSystem.API.csproj|solutionrelative:filedownloadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F81C7B42-379B-40BA-95FC-BEF58A5D4C46}|FileDownLoadSystem.System\\FileDownLoadSystem.System.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.system\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F81C7B42-379B-40BA-95FC-BEF58A5D4C46}|FileDownLoadSystem.System\\FileDownLoadSystem.System.csproj|solutionrelative:filedownloadsystem.system\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\migrations\\filedownloadsystemdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\migrations\\filedownloadsystemdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F81C7B42-379B-40BA-95FC-BEF58A5D4C46}|FileDownLoadSystem.System\\FileDownLoadSystem.System.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.system\\iservice\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F81C7B42-379B-40BA-95FC-BEF58A5D4C46}|FileDownLoadSystem.System\\FileDownLoadSystem.System.csproj|solutionrelative:filedownloadsystem.system\\iservice\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,105 +47,106 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AutofacServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\AutofacServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Extensions\\AutofacServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\AutofacServiceCollectionExtensions.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\Extensions\\AutofacServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "FileDownLoadSystem.API\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T13:05:20.561Z",
+              "WhenOpened": "2024-12-09T14:34:16.367Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.API\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\WeatherForecast.cs",
-              "RelativeToolTip": "FileDownLoadSystem.API\\WeatherForecast.cs",
+              "DocumentIndex": 2,
+              "Title": "IFileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.System\\IRespositories\\IFileRepository.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.System\\IRespositories\\IFileRepository.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.System\\IRespositories\\IFileRepository.cs",
+              "RelativeToolTip": "FileDownLoadSystem.System\\IRespositories\\IFileRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:42:08.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppSetting.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Configuration\\AppSetting.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Configuration\\AppSetting.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Configuration\\AppSetting.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\Configuration\\AppSetting.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBgAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:21:13.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\appsettings.json",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\appsettings.json",
-              "RelativeToolTip": "FileDownLoadSystem.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-04T14:15:03.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\Program.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.API\\Program.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.API\\Program.cs",
-              "RelativeToolTip": "FileDownLoadSystem.API\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:52:45.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileDownLoadSystemDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\EFDbContext\\FileDownLoadSystemDbContext.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\EFDbContext\\FileDownLoadSystemDbContext.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\EFDbContext\\FileDownLoadSystemDbContext.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\EFDbContext\\FileDownLoadSystemDbContext.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:47:09.431Z",
+              "WhenOpened": "2024-12-09T14:34:06.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IDenpendency.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\IDenpendency.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Extensions\\IDenpendency.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\IDenpendency.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\Extensions\\IDenpendency.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
+              "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:47:01.797Z",
+              "WhenOpened": "2024-12-09T14:29:07.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FileDownLoadSystemDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Migrations\\FileDownLoadSystemDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Migrations\\FileDownLoadSystemDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Migrations\\FileDownLoadSystemDbContextModelSnapshot.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\Migrations\\FileDownLoadSystemDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAABBwA4AAAATAAAAAAAAAA==",
+              "Title": "IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.System\\IService\\IFileService.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.System\\IService\\IFileService.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.System\\IService\\IFileService.cs",
+              "RelativeToolTip": "FileDownLoadSystem.System\\IService\\IFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T15:08:28.824Z"
+              "WhenOpened": "2024-12-09T14:27:54.656Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\IService.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\IService.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\IService.cs",
+              "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:26:29.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
+              "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:27:15.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
+              "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:27:05.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.System\\Service\\FileService.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.System\\Service\\FileService.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.System\\Service\\FileService.cs",
+              "RelativeToolTip": "FileDownLoadSystem.System\\Service\\FileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:26:17.174Z",
+              "EditorCaption": ""
             }
           ]
         }

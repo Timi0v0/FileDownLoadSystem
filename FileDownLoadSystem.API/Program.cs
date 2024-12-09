@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using FileDownLoadSystem.Core.Extensions;
+using Microsoft.AspNetCore.Builder;
 
 namespace FileDownLoadSystem.API
 {
@@ -23,8 +24,17 @@ namespace FileDownLoadSystem.API
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
+            // 配置swagger
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
+                {
+                    // 设置 Swagger UI 的起始页面为根路径 "/"
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                    options.RoutePrefix = string.Empty; // 根路径显示 Swagger UI
+                });
+            }
 
             app.UseHttpsRedirection();
 

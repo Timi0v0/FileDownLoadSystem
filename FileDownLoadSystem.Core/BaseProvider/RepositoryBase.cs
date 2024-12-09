@@ -34,7 +34,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
         /// <param name="predicate"></param>
         /// <returns></returns>
         public virtual TBaseModel FindFirst(Expression<Func<TBaseModel, bool>> predicate) {
-            return _dbSet.Where(predicate).FirstOrDefault();
+            return _dbSet.Where(predicate).FirstOrDefault()!;
         }
         /// <summary>
         /// 根据条件（predicate）返回一个 IQueryable 的结果集 允许延迟执行（延迟加载），使查询可以在之后继续追加筛选、排序等操作
