@@ -1,4 +1,7 @@
-﻿using FileDownLoadSystem.Entity;
+﻿using FileDownLoadSystem.Core.Enums;
+using FileDownLoadSystem.Core.Extensions;
+using FileDownLoadSystem.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +21,8 @@ namespace FileDownLoadSystem.Core.BaseProvider
 
         public IQueryable<TBaseModel> FindAsIQueryable(Expression<Func<TBaseModel, bool>> predicate);
 
+        public TBaseModel FindFirst(Expression<Func<TBaseModel, bool>> predicate, Expression<Func<TBaseModel, Dictionary<object, QueryOrderBy>>> orderBy = null);
+
+        public IQueryable<TBaseModel> FindAsIQueryable(Expression<Func<TBaseModel, bool>> predicate, Expression<Func<TBaseModel, Dictionary<object, QueryOrderBy>>> orderBy = null);
     }
 }

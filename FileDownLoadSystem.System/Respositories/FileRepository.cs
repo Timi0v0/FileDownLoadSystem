@@ -17,12 +17,8 @@ namespace FileDownLoadSystem.System.Respositories
         {
         }
 
-        public IQueryable<FileModel> FindAsIQueryable(Expression<Func<FileModel, bool>> predicate)
-        {
-            return base.FindAsIQueryable(predicate);
-        }
 
-        public FileModel FindFirst(Expression<Func<FileModel, bool>> predicate)
+        public override FileModel FindFirst(Expression<Func<FileModel, bool>> predicate)
         {
             return base.FindFirst(predicate);
         }

@@ -1,4 +1,6 @@
 ﻿using FileDownLoadSystem.Core.EFDbContext;
+using FileDownLoadSystem.Core.Enums;
+using FileDownLoadSystem.Core.Extensions;
 using FileDownLoadSystem.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -44,6 +46,21 @@ namespace FileDownLoadSystem.Core.BaseProvider
         public IQueryable<TBaseModel> FindAsIQueryable(Expression<Func<TBaseModel, bool>> predicate)
         {
             return _dbSet.Where(predicate);
+        }
+
+
+        public virtual TBaseModel FindFirst(Expression<Func<TBaseModel, bool>> predicate, Expression<Func<TBaseModel,Dictionary<object, QueryOrderBy>>> orderBy=null)
+        {
+            return FindAsIQueryable(predicate, orderBy).FirstOrDefault()!;
+        }
+
+        public IQueryable<TBaseModel> FindAsIQueryable(Expression<Func<TBaseModel, bool>> predicate, Expression<Func<TBaseModel, Dictionary<object, QueryOrderBy>>> orderBy = null)
+        {
+            if (orderBy==null)
+            {
+                return DbContext.Set<TBaseModel>().Where(predicate).GetIQueryableOrderBy(orderBy.GetExpressionToDic());
+            }
+            return DbContext.Set<TBaseModel>().Where(predicate);
         }
     }
 }
