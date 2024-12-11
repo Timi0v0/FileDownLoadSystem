@@ -62,5 +62,125 @@ namespace FileDownLoadSystem.Core.BaseProvider
             }
             return DbContext.Set<TBaseModel>().Where(predicate);
         }
+        /// <summary>
+        /// 将实体添加到数据库中
+        /// </summary>
+        /// <param name="baseModels">实体对象列表</param>
+        /// <param name="isSave">是否提交到数据库</param>
+        public virtual void AddRange(IEnumerable<TBaseModel> baseModels,bool isSave = false)
+        {
+            _dbSet.AddRange(baseModels);
+            if (isSave)
+            {
+                DbContext.SaveChanges();
+            }
+        }
+        /// <summary>
+        /// 将某个数据添加到数据库中
+        /// </summary>
+        /// <param name="baseModel">实体对象</param>
+        /// <param name="isSave">是否提交到数据库</param>
+        public virtual void Add(TBaseModel baseModel, bool isSave = false)
+        {
+            AddRange(new List<TBaseModel> { baseModel }, isSave);
+        }
+        /// <summary>
+        /// 异步将某些数据添加到数据库中
+        /// </summary>
+        /// <param name="baseModel"></param>
+        /// <returns></returns>
+        public virtual Task AddRangeAsync(IEnumerable<TBaseModel> baseModels)
+        {
+           return _dbSet.AddRangeAsync(baseModels);
+        }
+        /// <summary>
+        /// 异步将某个数据添加到数据库中
+        /// </summary>
+        /// <param name="baseModel"></param>
+        /// <returns></returns>
+        public virtual Task AddAsync(TBaseModel baseModel)
+        {
+            return AddRangeAsync(new List<TBaseModel>() { baseModel});
+        }
+        /// <summary>
+        /// 删除某个数据
+        /// </summary>
+        /// <param name="baseModel"></param>
+        /// <param name="isSave"></param>
+        public virtual void Delete(TBaseModel baseModel, bool isSave = false)
+        {
+            _dbSet.Remove(baseModel);
+            if (isSave)
+            {
+                DbContext.SaveChanges();
+            }
+        }
+        /// <summary>
+        /// 批量删除某些数据
+        /// </summary>
+        /// <param name="baseModels"></param>
+        /// <param name="isSave"></param>
+        public virtual void DeleteRange(IEnumerable<TBaseModel> baseModels, bool isSave = false)
+        {
+            _dbSet.RemoveRange(baseModels);
+            if (isSave)
+            {
+                DbContext.SaveChanges();
+            }
+        }
+        /// <summary>
+        /// 根据条件删除某些数据 通过此方法进行删除性能比较低 执行原生态的SQL语句效率会更高
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <param name="isSave"></param>
+        public virtual void DeleteRange(Expression<Func<TBaseModel, bool>> predicate, bool isSave = false)
+        {
+            //dbContext.Database.ExecuteSqlRaw("DELETE FROM Entities WHERE Property = {0}", value);
+            var baseModels = FindAsIQueryable(predicate).ToList();
+            DeleteRange(baseModels, isSave);
+        }
+        /// <summary>
+        /// 通过主键批量删除
+        /// </summary>
+        /// <param name="keys">主键key</param>
+        /// <param name="delList">是否连明细一起删除</param>
+        public virtual void DeleteWithKeys(object[] keys, bool delList = false)
+        {
+            //对传入的参数进行判断
+            if (keys == null || keys.Length == 0)
+            {
+                return;
+            }
+
+        }
+
+        /// <summary>
+        /// 更新数据库
+        /// </summary>
+        /// <param name="baseModel"></param>
+
+        public virtual int Update(TBaseModel baseModel)
+        {
+            _dbSet.Update(baseModel);
+            return DbContext.SaveChanges();
+        }
+        /// <summary>
+        /// 开放其他实体类去使用
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="baseModel"></param>
+        /// <returns></returns>
+        public virtual int Update<T>(T baseModel) where T : class
+        {
+            DbContext.Set<T>().Update(baseModel);
+            return DbContext.SaveChanges();
+        }
+        /// <summary>
+        /// 保存更改
+        /// </summary>
+        public virtual void SaveChanges()
+        {
+            DbContext.SaveChanges();
+        }
     }
 }

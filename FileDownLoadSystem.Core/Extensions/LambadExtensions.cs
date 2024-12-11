@@ -65,13 +65,14 @@ namespace FileDownLoadSystem.Core.Extensions
             return Expression.Lambda<Func<T, TKey>>(Expression.Property(parameter, propertyName), parameter);
         }
 
-        public static Dictionary<object, QueryOrderBy> GetExpressionToDic<TEntity>(this Expression<Func<TEntity, Dictionary<object, QueryOrderBy>>> orderBy)
+        public static Dictionary<string, QueryOrderBy> GetExpressionToDic<T>(this Expression<Func<T, Dictionary<object, QueryOrderBy>>> expression)
         {
-           if (orderBy == null)
+            //2020.09.14增加排序字段null值判断
+            if (expression == null)
             {
-                return new Dictionary<object, QueryOrderBy>();
+                return new Dictionary<string, QueryOrderBy>();
             }
-            return orderBy.GetExpressionToPair().Reverse().ToList().ToDictionary(x => x.Key, x => x.Value);
+            return expression.GetExpressionToPair().Reverse().ToList().ToDictionary(x => x.Key, x => x.Value);
         }
 
         public static ParameterExpression GetExpressionParameter(this Type type)
@@ -92,12 +93,12 @@ namespace FileDownLoadSystem.Core.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="expression"></param>
         /// <returns></returns>
-        public static IEnumerable<KeyValuePair<object, QueryOrderBy>> GetExpressionToPair<T>(this Expression<Func<T, Dictionary<object, QueryOrderBy>>> expression)
+        public static IEnumerable<KeyValuePair<string, QueryOrderBy>> GetExpressionToPair<T>(this Expression<Func<T, Dictionary<object, QueryOrderBy>>> expression)
         {
 
             foreach (var exp in ((ListInitExpression)expression.Body).Initializers)
             {
-                yield return new KeyValuePair<object, QueryOrderBy>(
+                yield return new KeyValuePair<string, QueryOrderBy>(
                 exp.Arguments[0] is MemberExpression ?
                 (exp.Arguments[0] as MemberExpression).Member.Name.ToString()
                 : ((exp.Arguments[0] as UnaryExpression).Operand as MemberExpression).Member.Name,
