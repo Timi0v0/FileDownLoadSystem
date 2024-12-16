@@ -1,5 +1,6 @@
 ﻿using FileDownLoadSystem.Core.Enums;
 using FileDownLoadSystem.Core.Extensions;
+using FileDownLoadSystem.Core.Utilities.Response;
 using FileDownLoadSystem.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -87,6 +88,13 @@ namespace FileDownLoadSystem.Core.BaseProvider
         /// 保存更改
         /// </summary>
         public  void SaveChanges();
+
+        /// <summary>
+        /// 执行事务
+        /// </summary>
+        /// <param name="action">需要执行的行为</param>
+        /// <returns>返回给前端的数据类型</returns>
+        public  WebResponseContent DbContextBeginTransaction(Func<WebResponseContent> action);
 
 
     }

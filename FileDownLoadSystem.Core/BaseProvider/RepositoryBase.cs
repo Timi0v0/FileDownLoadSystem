@@ -1,14 +1,17 @@
 ﻿using FileDownLoadSystem.Core.EFDbContext;
 using FileDownLoadSystem.Core.Enums;
 using FileDownLoadSystem.Core.Extensions;
+using FileDownLoadSystem.Core.Utilities.Response;
 using FileDownLoadSystem.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace FileDownLoadSystem.Core.BaseProvider
 {
@@ -181,6 +184,38 @@ namespace FileDownLoadSystem.Core.BaseProvider
         public virtual void SaveChanges()
         {
             DbContext.SaveChanges();
+        }
+        /// <summary>
+        /// 执行事务
+        /// </summary>
+        /// <param name="action">需要执行的行为</param>
+        /// <returns>返回给前端的数据类型</returns>
+        public virtual WebResponseContent DbContextBeginTransaction(Func<WebResponseContent> action)
+        {
+            WebResponseContent webResponseContent = new WebResponseContent();
+            using (IDbContextTransaction transaction = DbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    webResponseContent = action();
+                    //获取执行结果
+                    if (webResponseContent.Status)
+                    {
+                        transaction.Commit();
+                    }
+                    else
+                    {
+                        transaction.Rollback();
+                    }
+                    return webResponseContent;
+                }
+                catch (Exception ex)
+                {
+                   //如果执行失败 对事务进行回滚
+                   transaction.Rollback();
+                    return webResponseContent.Error(ex.ToString());
+                }
+            }
         }
     }
 }

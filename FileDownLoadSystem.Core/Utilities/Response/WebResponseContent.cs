@@ -27,47 +27,54 @@ namespace FileDownLoadSystem.Core.Utilities.Response
                 
         }
 
-        public WebResponseContent OK()
-        {
-            this.Status = true;
-            return this;
-        }
-
-        public WebResponseContent OK(string message=null,object data = null)
+        public WebResponseContent OK(string message = null, object data = null)
         {
             this.Status = true;
             this.Message = message;
             this.Data = data;
             return this;
         }
-        public WebResponseContent Error()
+        public WebResponseContent OK(ResponseType responseType)
         {
-            this.Status = false;
-            return this;
+            return Set(responseType, true);
         }
-        public WebResponseContent Error(string message = null, object data = null)
+        public WebResponseContent Error(string message = null)
         {
             this.Status = false;
             this.Message = message;
-            this.Data = data;
             return this;
         }
-
-        public WebResponseContent Set(ResponseType responseType, string message = null, object data = null)
+        public WebResponseContent Error(ResponseType responseType)
         {
+            return Set(responseType, false);
+        }
+        public WebResponseContent Set(ResponseType responseType)
+        {
+            bool? b = null;
+            return this.Set(responseType, b);
+        }
+        public WebResponseContent Set(ResponseType responseType, bool? status)
+        {
+            return this.Set(responseType, null, status);
+        }
+        public WebResponseContent Set(ResponseType responseType, string msg)
+        {
+            bool? b = null;
+            return this.Set(responseType, msg, b);
+        }
+        public WebResponseContent Set(ResponseType responseType, string msg, bool? status)
+        {
+            if (status != null)
+            {
+                this.Status = (bool)status;
+            }
             this.Code = ((int)responseType).ToString();
-            if (data!=null)
+            if (!string.IsNullOrEmpty(msg))
             {
-                this.Data = data;
+                Message = msg;
+                return this;
             }
-            if (!string.IsNullOrEmpty(message))
-            {
-                this.Message = message;
-            }
-            else
-            {
-                this.Message = responseType.GetMsg();
-            }
+            Message = responseType.GetMsg();
             return this;
         }
     }
