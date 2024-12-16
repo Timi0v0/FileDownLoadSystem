@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\utilities\\response\\webresponsecontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\utilities\\response\\webresponsecontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\extensions\\objectextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\extensions\\objectextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B28B8163-D428-42F3-A1A3-FB4A6CA3C321}|FileDownLoadSystem.Entity\\FileDownLoadSystem.Entity.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.entity\\domainmodels\\savemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B28B8163-D428-42F3-A1A3-FB4A6CA3C321}|FileDownLoadSystem.Entity\\FileDownLoadSystem.Entity.csproj|solutionrelative:filedownloadsystem.entity\\domainmodels\\savemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B28B8163-D428-42F3-A1A3-FB4A6CA3C321}|FileDownLoadSystem.Entity\\FileDownLoadSystem.Entity.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.entity\\fileinfo\\filemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B28B8163-D428-42F3-A1A3-FB4A6CA3C321}|FileDownLoadSystem.Entity\\FileDownLoadSystem.Entity.csproj|solutionrelative:filedownloadsystem.entity\\fileinfo\\filemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,24 +27,8 @@
       "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\extensions\\entityproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\extensions\\lambadextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\extensions\\lambadextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B28B8163-D428-42F3-A1A3-FB4A6CA3C321}|FileDownLoadSystem.Entity\\FileDownLoadSystem.Entity.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.entity\\fileinfo\\filemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B28B8163-D428-42F3-A1A3-FB4A6CA3C321}|FileDownLoadSystem.Entity\\FileDownLoadSystem.Entity.csproj|solutionrelative:filedownloadsystem.entity\\fileinfo\\filemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|c:\\users\\timi\\desktop\\\u9879\u76EE\\filedownloadsystem\\filedownloadsystem\\filedownloadsystem.core\\baseprovider\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4562003A-75F0-4F25-9246-33FE188F060D}|FileDownLoadSystem.Core\\FileDownLoadSystem.Core.csproj|solutionrelative:filedownloadsystem.core\\baseprovider\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,38 +38,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RepositoryBase.cs",
               "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
               "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
               "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
               "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\RepositoryBase.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAawLIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T14:27:15.092Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SaveModel.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Entity\\DomainModels\\SaveModel.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.Entity\\DomainModels\\SaveModel.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Entity\\DomainModels\\SaveModel.cs",
+              "RelativeToolTip": "FileDownLoadSystem.Entity\\DomainModels\\SaveModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T11:18:00.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WebResponseContent.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Utilities\\Response\\WebResponseContent.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Utilities\\Response\\WebResponseContent.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Utilities\\Response\\WebResponseContent.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\Utilities\\Response\\WebResponseContent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Title": "ObjectExtension.cs",
+              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\ObjectExtension.cs",
+              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Extensions\\ObjectExtension.cs",
+              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\ObjectExtension.cs",
+              "RelativeToolTip": "FileDownLoadSystem.Core\\Extensions\\ObjectExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:18:20.065Z",
+              "WhenOpened": "2024-12-13T14:57:05.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "FileModel.cs",
               "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Entity\\FileInfo\\FileModel.cs",
               "RelativeDocumentMoniker": "FileDownLoadSystem.Entity\\FileInfo\\FileModel.cs",
@@ -85,16 +97,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "EntityProperties.cs",
               "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\EntityProperties.cs",
               "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Extensions\\EntityProperties.cs",
               "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\EntityProperties.cs",
               "RelativeToolTip": "FileDownLoadSystem.Core\\Extensions\\EntityProperties.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:47:12.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:47:12.233Z"
             },
             {
               "$type": "Document",
@@ -110,39 +121,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "BaseService.cs",
               "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
               "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
               "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
               "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\BaseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAawB0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T13:28:54.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\BaseProvider\\IRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBkAAAC0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:28:42.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LambadExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\LambadExtensions.cs",
-              "RelativeDocumentMoniker": "FileDownLoadSystem.Core\\Extensions\\LambadExtensions.cs",
-              "ToolTip": "C:\\Users\\TiMi\\Desktop\\\u9879\u76EE\\FileDownLoadSystem\\FileDownLoadSystem\\FileDownLoadSystem.Core\\Extensions\\LambadExtensions.cs",
-              "RelativeToolTip": "FileDownLoadSystem.Core\\Extensions\\LambadExtensions.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAASwEMAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:26:33.741Z"
             }
           ]
         }

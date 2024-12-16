@@ -1,4 +1,5 @@
-﻿using FileDownLoadSystem.Entity;
+﻿using FileDownLoadSystem.Core.Utilities.Response;
+using FileDownLoadSystem.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,15 @@ namespace FileDownLoadSystem.Core.BaseProvider
         public TBaseModel FindFirst()
         {
             return Repository.FindFirst(x=>x.Id==1);
-        }   
+        } 
+        
+        public virtual WebResponseContent AddEntity(TBaseModel baseModel)
+        {
+            return Add<TBaseModel>(baseModel,null);
+        }
+        public WebResponseContent Add<TDetail>(TBaseModel baseModel,List<TDetail> list = null)
+        {
+
+        }
     }
 }
