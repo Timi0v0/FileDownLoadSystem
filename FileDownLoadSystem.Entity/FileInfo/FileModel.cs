@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FileDownLoadSystem.Entity.AttributeManager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
@@ -11,10 +12,11 @@ namespace FileDownLoadSystem.Entity.FileInfo
     /// <summary>
     /// 下载文件模型
     /// </summary>
+    [Entity(DetailTable =new Type[] {typeof(FilePackages)},ForeignKeyName ="FileId")]
     public class FileModel:BaseModel
     {
-        //文件序号
-        public int FileId { get; set; }
+        //文件类型
+        public int FileTypeId { get; set; }
         //文件名称
         public string FileName { get; set; }
         //文件图标地址
