@@ -57,7 +57,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
                 //获取主表的主键
                 PropertyInfo mainKeyProperty = typeof(TbaseModel).GetKeyProperty();
                 //判断主键是否为空 或者前端返回的数据不包含主键 或者主键的值为空
-                if (mainKeyProperty == null || saveModel.MainData.ContainsKey(mainKeyProperty.Name) || saveModel.MainData[mainKeyProperty.Name] == null)
+                if (mainKeyProperty == null || !saveModel.MainData.ContainsKey(mainKeyProperty.Name) || saveModel.MainData[mainKeyProperty.Name] == null)
                 {
                     return webResponseContent.Error(Enums.ResponseType.NoKey);
                 }

@@ -2,6 +2,7 @@ using FileDownLoadSystem.Core.BaseProvider;
 using FileDownLoadSystem.Core.Enums;
 using FileDownLoadSystem.Entity;
 using FileDownLoadSystem.Entity.DomainModels;
+using Microsoft.EntityFrameworkCore;
 using Moq;
 
 namespace FileDownLoadSystem.Core.Test.BaseProvider
@@ -28,7 +29,8 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
 
             // Assert
             Assert.False(result.Status);
-            Assert.Equal(ResponseType.ParametersLack.ToString(), result.Code);
+            string exceptedCode = ResponseType.ParametersLack.GetHashCode().ToString();
+            Assert.Equal(exceptedCode, result.Code);
         }
 
         [Fact]
@@ -45,7 +47,8 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
 
             // Assert
             Assert.False(result.Status);
-            Assert.Equal(ResponseType.NoKey.ToString(), result.Code);
+            string exceptedCode = ResponseType.NoKey.GetHashCode().ToString();
+            Assert.Equal(exceptedCode, result.Code);
         }
 
         [Fact]
@@ -60,14 +63,15 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
                 }
             };
 
-            _mockRepository.Setup(r => r.Update(It.IsAny<BaseModel>())).Verifiable();
+            _mockRepository.Setup(r => r.Update<BaseModel>(It.IsAny<BaseModel>())).Verifiable();
 
             // Act
             var result = _baseService.Update<BaseModel>(saveModel);
 
             // Assert
             Assert.True(result.Status);
-            _mockRepository.Verify(r => r.Update(It.IsAny<BaseModel>()), Times.Once);
+            //验证Update方法是否按照预期被调用 表示Update方法必须被调用一次
+            _mockRepository.Verify(r => r.Update<BaseModel>(It.IsAny<BaseModel>()), Times.Once);
         }
 
         [Fact]
@@ -82,7 +86,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
                 }
             };
 
-            _mockRepository.Setup(r => r.Update(It.IsAny<BaseModel>())).Throws(new Exception("Test exception"));
+            _mockRepository.Setup(r => r.Update<BaseModel>(It.IsAny<BaseModel>())).Throws(new Exception("Test exception"));
 
             // Act
             var result = _baseService.Update<BaseModel>(saveModel);
