@@ -62,11 +62,10 @@ namespace FileDownLoadSystem.Core.BaseProvider
         /// <summary>
         /// 更新主表和明细表
         /// </summary>
-        /// <typeparam name="TbaseModel"></typeparam>
+        /// <typeparam name="TBaseModel"></typeparam>
         /// <param name="saveModel"></param>
         /// <returns></returns>
-        public WebResponseContent? Update<TbaseModel>(SaveModel saveModel)
-            where TbaseModel : BaseModel
+        public WebResponseContent? Update(SaveModel saveModel)
         {
             try
             {
@@ -77,7 +76,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
                     return webResponseContent.Error(Enums.ResponseType.ParametersLack);
                 }
                 //获取主表的主键
-                PropertyInfo mainKeyProperty = typeof(TbaseModel).GetKeyProperty();
+                PropertyInfo mainKeyProperty = typeof(TBaseModel).GetKeyProperty();
                 //获取主键类型对应的默认值
                 object mainKeyDefaultValue = mainKeyProperty.PropertyType.Assembly.CreateInstance(mainKeyProperty.PropertyType.FullName!)!;
                 //判断主键是否为空 或者前端返回的数据不包含主键 或者主键的值为空 或者主键的值等于默认值
@@ -90,7 +89,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
                 //如果没有明细数据 直接更新主表
                 if (saveModel.DetailData == null || saveModel.DetailData.Count == 0)
                 {
-                    TbaseModel model=saveModel.MainData.DicToEntity<TbaseModel>();
+                    TBaseModel model=saveModel.MainData.DicToEntity<TBaseModel>();
                     Repository.Update(model);
                     return webResponseContent.OK(data:model);
                 }
@@ -111,29 +110,75 @@ namespace FileDownLoadSystem.Core.BaseProvider
                 object detailKeyDefaultValue = detailKeyProperty.PropertyType.Assembly.CreateInstance(detailKeyProperty.PropertyType.FullName!)!;
                 foreach (Dictionary<string,object> dic in saveModel.DetailData)
                 {
-                    //检查当前字典是否包含主键以及外键
-                    if (!dic.ContainsKey(detailKeyProperty.Name)||
-                        dic[detailKeyProperty.Name]==detailKeyDefaultValue || 
-                        !dic.ContainsKey(detailForeignKey)||
-                        dic[detailForeignKey] == mainKeyDefaultValue)
+                    //如果数据中不包含主键 代表是新增数据
+                    if (!dic.ContainsKey(detailKeyProperty.Name))
                     {
-                        return webResponseContent.Error(Enums.ResponseType.NoKey);
+                        dic.Add(detailKeyProperty.Name, detailKeyDefaultValue);
+                        if (dic.ContainsKey(detailForeignKey))
+                        {
+                            dic[detailForeignKey] = mainKeyDefaultValue;
+                        }
+                        else
+                        {
+                            dic.Add(detailForeignKey,mainKeyDefaultValue);
+                        }
+                        continue;
                     }
+                    if (dic[detailKeyProperty.Name]==null)
+                    {
+                        return webResponseContent.Error(Enums.ResponseType.KeyError);
+                    }
+                    //如果数据中包含主键 代表是更新数据 检查其外键
+                    if (!dic.ContainsKey(detailForeignKey) || dic[detailForeignKey] == null || dic[detailForeignKey]==mainKeyDefaultValue)
+                    {
+                        return webResponseContent.Error($"{detailForeignKey} 是必要的参数");
+                    }
+
                 }
-               return this.GetType().GetMethod("UpdateToEntity")?.MakeGenericMethod(new Type[] {detailType }).Invoke(this, new object[] { saveModel, mainKeyProperty, detailKeyProperty,mainKeyDefaultValue }) as WebResponseContent;
+                return this.GetType().GetMethod("UpdateToEntity")?.MakeGenericMethod(new Type[] {detailType }).Invoke(this, new object[] { saveModel, mainKeyProperty, detailKeyProperty,mainKeyDefaultValue }) as WebResponseContent;
             }
             catch (Exception ex)
             {
                 return new WebResponseContent().Error(ex.ToString());
             }
         }
-
-        public WebResponseContent UpdateToEntity<TDetail>(SaveModel saveModel,PropertyInfo mainKeyProperty, PropertyInfo detailKeyInfo,object keyDefaultVal) where TDetail : class
+        /// <summary>
+        /// 更新主表和明细表导数据库
+        /// </summary>
+        /// <typeparam name="TDetail"></typeparam>
+        /// <param name="saveModel"></param>
+        /// <param name="mainKeyProperty"></param>
+        /// <param name="detailKeyInfo"></param>
+        /// <param name="mainKeyDefaultVal">主表的主键默认值</param>
+        /// <returns></returns>
+        public WebResponseContent UpdateToEntity<TDetail>(SaveModel saveModel,PropertyInfo mainKeyProperty, PropertyInfo detailKeyInfo,object mainKeyDefaultVal) where TDetail : class
         {
             try
             {
                 WebResponseContent webResponseContent = new WebResponseContent();
+                //获取主表数据
+                TBaseModel mainData=saveModel.MainData.DicToEntity<TBaseModel>();
+                //获取从表的数据
+                List<TDetail> detailData = saveModel.DetailData.DicToList<TDetail>();
+                //新增对象
+                List<TDetail> addList = new List<TDetail>();
+                //修改对象
+                List<TDetail> updateList = new List<TDetail>();
 
+                //获取新增和修改的对象
+                foreach (TDetail detail in detailData)
+                {
+                    //如果主键的值等于默认值 代表是新增数据
+                    object detaiDefaultVal = detailKeyInfo.PropertyType.Assembly.CreateInstance(detailKeyInfo.PropertyType.FullName!)!;
+                    if (detailKeyInfo.GetValue(detail)== detaiDefaultVal)
+                    {
+                        //新增数据需要将从表的外键赋值为主表的主键值
+                        detailKeyInfo
+                        addList.Add(detail);
+                        continue;
+                    }
+
+                }
 
                 return webResponseContent.OK();
             }

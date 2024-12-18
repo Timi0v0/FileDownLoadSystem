@@ -25,7 +25,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             SaveModel saveModel = null;
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.False(result.Status);
@@ -43,7 +43,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             };
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.False(result.Status);
@@ -66,7 +66,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             _mockRepository.Setup(r => r.Update(It.IsAny<FileModel>())).Verifiable();
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.True(result.Status);
@@ -91,7 +91,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             };
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.False(result.Status);
@@ -121,11 +121,11 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             _mockRepository.Setup(r => r.Update(It.IsAny<FileModel>())).Verifiable();
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.True(result.Status);
-            _mockRepository.Verify(r => r.Update(It.IsAny<BaseModel>()), Times.Once);
+            _mockRepository.Verify(r => r.Update(It.IsAny<FileModel>()), Times.Once);
         }
 
         [Fact]
@@ -149,7 +149,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             };
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.False(result.Status);
@@ -172,7 +172,7 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
             _mockRepository.Setup(r => r.Update(It.IsAny<FileModel>())).Verifiable();
 
             // Act
-            var result = _baseService.Update<FileModel>(saveModel);
+            var result = _baseService.Update(saveModel);
 
             // Assert
             Assert.True(result.Status);
