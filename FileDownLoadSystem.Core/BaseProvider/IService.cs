@@ -1,4 +1,6 @@
-﻿using FileDownLoadSystem.Entity;
+﻿using FileDownLoadSystem.Core.Utilities.Response;
+using FileDownLoadSystem.Entity;
+using FileDownLoadSystem.Entity.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +14,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
         where TBaseRepository : IRepository<TBaseModel>
     {
         public TBaseModel FindFirst();
+
+        public WebResponseContent Update(SaveModel saveModel);
     }
 }

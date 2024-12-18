@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace FileDownLoadSystem.Core.BaseProvider
 {
@@ -65,7 +66,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
         /// <typeparam name="TBaseModel"></typeparam>
         /// <param name="saveModel"></param>
         /// <returns></returns>
-        public WebResponseContent? Update(SaveModel saveModel)
+        public WebResponseContent Update(SaveModel saveModel)
         {
             try
             {
@@ -164,23 +165,49 @@ namespace FileDownLoadSystem.Core.BaseProvider
                 List<TDetail> addList = new List<TDetail>();
                 //修改对象
                 List<TDetail> updateList = new List<TDetail>();
-
+                //删除对象
+                List<object> delKeys=saveModel.DelKeys;
+                //如果主键的值等于默认值 代表是新增数据
+                object detaiDefaultVal = detailKeyInfo.PropertyType.Assembly.CreateInstance(detailKeyInfo.PropertyType.FullName!)!;
                 //获取新增和修改的对象
                 foreach (TDetail detail in detailData)
                 {
-                    //如果主键的值等于默认值 代表是新增数据
-                    object detaiDefaultVal = detailKeyInfo.PropertyType.Assembly.CreateInstance(detailKeyInfo.PropertyType.FullName!)!;
-                    if (detailKeyInfo.GetValue(detail)== detaiDefaultVal)
+                    if (detaiDefaultVal.Equals(detailKeyInfo.GetValue(detail)))//表示新增的数据
                     {
+                        //给新增的数据主键赋值
+                        if (detailKeyInfo.PropertyType==typeof(Guid))
+                        {
+                            detailKeyInfo.SetValue(detail, new Guid());
+                        }
                         //新增数据需要将从表的外键赋值为主表的主键值
-                        detailKeyInfo
+                        detailKeyInfo.SetValue(detail,mainKeyProperty.GetValue(mainData));
                         addList.Add(detail);
                         continue;
                     }
-
+                    else
+                    {
+                        updateList.Add(detail);
+                    }
                 }
-
-                return webResponseContent.OK();
+                //判断是否有需要删除的数据
+                if (delKeys?.Count()>0==true)
+                {
+                    delKeys = saveModel.DelKeys.Select(x => x.ChangeType(detailKeyInfo.PropertyType)).Where(x => x != null).ToList();
+                }
+                //保存主表
+                Repository.Add(mainData,true);
+                //保存从表
+                updateList.ForEach(x => Repository.Update(x));
+                addList.ForEach(x => Repository.DbContext.Entry<TDetail>(x).State=Microsoft.EntityFrameworkCore.EntityState.Added);
+                delKeys.ForEach(
+                    x =>
+                    {
+                        TDetail detail=Activator.CreateInstance<TDetail>();
+                        detailKeyInfo.SetValue(detail, x);
+                        Repository.DbContext.Entry<TDetail>(detail).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+                    });
+                Repository.DbContext.SaveChanges();
+                return webResponseContent.OK(Enums.ResponseType.SaveSuccess);
             }
             catch (Exception ex)
             {

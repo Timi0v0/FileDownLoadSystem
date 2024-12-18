@@ -112,8 +112,13 @@ namespace FileDownLoadSystem.Core.Test.BaseProvider
                 {
                     new Dictionary<string, object>
                     {
-                        { "DetailId", 1 },
-                        { "FileModelId", 1 }
+                        { "DetailId", 123 },
+                        { "FileName", "File_857.txt" },
+                        { "FileIconUrl", "https://example.com/icon_3.png" },
+                        { "UploadTime", "2024-12-16T14:23:47" },
+                        { "ClickCount", 7345 },
+                        { "DownloadCount", 189 },
+                        { "FileDescription", "Description_72" }
                     }
                 }
             };

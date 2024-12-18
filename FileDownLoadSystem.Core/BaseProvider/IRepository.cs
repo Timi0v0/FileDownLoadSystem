@@ -1,4 +1,5 @@
-﻿using FileDownLoadSystem.Core.Enums;
+﻿using FileDownLoadSystem.Core.EFDbContext;
+using FileDownLoadSystem.Core.Enums;
 using FileDownLoadSystem.Core.Extensions;
 using FileDownLoadSystem.Core.Utilities.Response;
 using FileDownLoadSystem.Entity;
@@ -18,6 +19,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
     /// <typeparam name="TBaseModel"></typeparam>
     public interface IRepository<TBaseModel> where TBaseModel : BaseModel
     {
+        public FileDownLoadSystemDbContext DbContext {  get; }
         public TBaseModel FindFirst(Expression<Func<TBaseModel, bool>> predicate);
 
         public IQueryable<TBaseModel> FindAsIQueryable(Expression<Func<TBaseModel, bool>> predicate);
