@@ -26,12 +26,53 @@ namespace FileDownLoadSystem.Core.BaseProvider
         public TBaseModel FindFirst()
         {
             return Repository.FindFirst(x=>x.Id==1);
-        } 
-        
-        public virtual WebResponseContent AddEntity(TBaseModel baseModel)
-        {
-            return Add<TBaseModel>(baseModel,null);
         }
+        #region 添加
+        public virtual WebResponseContent Add(SaveModel saveModel)
+        {
+            if (saveModel.MainData?.Count>0==false)
+            {
+                return WebResponseContent.Instance.Error(Enums.ResponseType.ParametersLack);
+            }
+            //检查主表的主键是否为空
+            PropertyInfo mainKeyporperty = typeof(TBaseModel).GetKeyProperty();
+            if (!saveModel.MainData.ContainsKey(mainKeyporperty.Name))
+            {
+                if (mainKeyporperty.PropertyType==typeof(Guid))
+                {
+                    saveModel.MainData.Add(mainKeyporperty.Name, new Guid());
+                }
+                else
+                {
+                    //获取主键类型对应的默认值
+                    object mainKeyDefaultValue=mainKeyporperty.PropertyType.Assembly.CreateInstance(mainKeyporperty.PropertyType.FullName!)!;
+                    saveModel.MainData.Add(mainKeyporperty.Name, mainKeyDefaultValue);
+                }
+            }
+            //如果不包含明细表数据 直接添加主表
+            if (saveModel.DetailData?.Count<=0==false)
+            {
+                TBaseModel model = saveModel.MainData.DicToEntity<TBaseModel>();
+                Repository.Add(model);
+                return WebResponseContent.Instance.OK(data: model);
+            }
+            //如果包含明细表数据
+            Type detailType = GetRealDetailType();
+
+            return this.GetType().GetMethod("AddEntity").MakeGenericMethod(new Type[] { detailType }).Invoke(this, new object[] { saveModel }) as WebResponseContent;
+        }
+        public virtual WebResponseContent AddEntity<TDetail>(SaveModel model)
+        {
+            return Add<TBaseModel>(baseModel, null);
+        }
+
+        public virtual WebResponseContent AddEntity<TDetail>(TBaseModel model,List<TDetail> details = null)
+            where TDetail:class
+        {
+
+        }
+        #endregion
+
         /// <summary>
         /// 添加主表和明细表
         /// </summary>
@@ -117,11 +158,11 @@ namespace FileDownLoadSystem.Core.BaseProvider
                         dic.Add(detailKeyProperty.Name, detailKeyDefaultValue);
                         if (dic.ContainsKey(detailForeignKey))
                         {
-                            dic[detailForeignKey] = mainKeyDefaultValue;
+                            dic[detailForeignKey] =saveModel.MainData[mainKeyProperty.Name];
                         }
                         else
                         {
-                            dic.Add(detailForeignKey,mainKeyDefaultValue);
+                            dic.Add(detailForeignKey, saveModel.MainData[mainKeyProperty.Name]);
                         }
                         continue;
                     }
@@ -180,7 +221,7 @@ namespace FileDownLoadSystem.Core.BaseProvider
                             detailKeyInfo.SetValue(detail, new Guid());
                         }
                         //新增数据需要将从表的外键赋值为主表的主键值
-                        detailKeyInfo.SetValue(detail,mainKeyProperty.GetValue(mainData));
+                        //detailKeyInfo.SetValue(detail,mainKeyProperty.GetValue(mainData));
                         addList.Add(detail);
                         continue;
                     }
@@ -195,17 +236,20 @@ namespace FileDownLoadSystem.Core.BaseProvider
                     delKeys = saveModel.DelKeys.Select(x => x.ChangeType(detailKeyInfo.PropertyType)).Where(x => x != null).ToList();
                 }
                 //保存主表
-                Repository.Add(mainData,true);
+                Repository.Update(mainData);
                 //保存从表
                 updateList.ForEach(x => Repository.Update(x));
                 addList.ForEach(x => Repository.DbContext.Entry<TDetail>(x).State=Microsoft.EntityFrameworkCore.EntityState.Added);
-                delKeys.ForEach(
+                if (delKeys?.Count() > 0 == true)
+                {
+                    delKeys.ForEach(
                     x =>
                     {
-                        TDetail detail=Activator.CreateInstance<TDetail>();
+                        TDetail detail = Activator.CreateInstance<TDetail>();
                         detailKeyInfo.SetValue(detail, x);
                         Repository.DbContext.Entry<TDetail>(detail).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
                     });
+                }                
                 Repository.DbContext.SaveChanges();
                 return webResponseContent.OK(Enums.ResponseType.SaveSuccess);
             }

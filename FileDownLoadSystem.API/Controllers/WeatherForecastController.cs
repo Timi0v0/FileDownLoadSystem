@@ -48,10 +48,7 @@ namespace FileDownLoadSystem.API.Controllers
                     { "PublishTime", "2024-12-15T08:30:00" }                    
                 }
             };
-            saveModel.DelKeys = new List<object>()
-            {
-                1
-            };
+            saveModel.DelKeys = new List<object> { 4, 3 };
             _fileService.Update(saveModel);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
