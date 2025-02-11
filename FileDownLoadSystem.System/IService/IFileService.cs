@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using FileDownLoadSystem.Core.BaseProvider;
 using FileDownLoadSystem.Core.Extensions;
+using FileDownLoadSystem.Core.Utilities.Response;
 using FileDownLoadSystem.Entity.FileInfo;
 using FileDownLoadSystem.System.IRespositories;
 namespace FileDownLoadSystem.System.IService
 {
     public interface IFileService:IService<FileModel, IFileRepository>,IDenpendency
     {
+        public Task<WebResponseContent> GetFilesByType(int typeId);
     }
 }

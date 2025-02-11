@@ -5,8 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	</ItemGroup>
 
-  <ItemGroup>
+
+		<ItemGroup>
     <ProjectReference Include="..\FileDownLoadSystem.Core\FileDownLoadSystem.Core.csproj" />
     <ProjectReference Include="..\FileDownLoadSystem.Entity\FileDownLoadSystem.Entity.csproj" />
   </ItemGroup>

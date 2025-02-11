@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace FileDownLoadSystem.System.Service
 {
-    public partial class FileService : BaseService<FileModel, IFileRepository>, IFileService
+    public partial class FileWebConfigsService : BaseService<FileWebConfigs, IFileWebConfigsRespository>, IFileWebConfigsService
     {
         private readonly IMapper _mapper;
-        public FileService(IFileRepository baseRepository,IMapper mapper) : base(baseRepository)
+        public FileWebConfigsService(IFileWebConfigsRespository baseRepository,IMapper mapper) : base(baseRepository)
         {
             _mapper = mapper;
         }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -30,5 +31,8 @@ namespace FileDownLoadSystem.Entity.FileInfo
         public long DownloadCount { get; set; }
         //文件的描述
         public string? FileDescription { get; set; }
+        [ForeignKey("FileId")]
+
+        public List<FilePackages> FilePackages { get; set; }
     }
 }

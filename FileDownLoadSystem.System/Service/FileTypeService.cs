@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using FileDownLoadSystem.Core.BaseProvider;
+﻿using FileDownLoadSystem.Core.BaseProvider;
 using FileDownLoadSystem.Entity.FileInfo;
 using FileDownLoadSystem.System.IRespositories;
 using FileDownLoadSystem.System.IService;
@@ -11,12 +10,10 @@ using System.Threading.Tasks;
 
 namespace FileDownLoadSystem.System.Service
 {
-    public partial class FileService : BaseService<FileModel, IFileRepository>, IFileService
+    public partial class FileTypeService : BaseService<FileTypes, IFileTypesRespository>, IFileTypeService
     {
-        private readonly IMapper _mapper;
-        public FileService(IFileRepository baseRepository,IMapper mapper) : base(baseRepository)
+        public FileTypeService(IFileTypesRespository baseRepository) : base(baseRepository)
         {
-            _mapper = mapper;
         }
     }
 }

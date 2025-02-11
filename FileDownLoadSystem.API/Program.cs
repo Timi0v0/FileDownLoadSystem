@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using FileDownLoadSystem.Core.Extensions;
+using FileDownLoadSystem.System;
 using Microsoft.AspNetCore.Builder;
 
 namespace FileDownLoadSystem.API
@@ -22,6 +23,16 @@ namespace FileDownLoadSystem.API
             builder.Services.AddEndpointsApiExplorer();
 
             builder.Services.AddSwaggerGen();
+            //添加CORS服务并配置策略
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder=>builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+            //添加AutoMapper服务
+            builder.Services.AddAutoMapper(typeof(FileSystemProfile));
 
             var app = builder.Build();
             // 配置swagger
@@ -39,7 +50,7 @@ namespace FileDownLoadSystem.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseCors("AllowAllOrigins");
 
             app.MapControllers();
 

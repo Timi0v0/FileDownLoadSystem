@@ -17,10 +17,11 @@ namespace FileDownLoadSystem.Core.BaseProvider
          where TBaseModel : BaseModel
         where TBaseRepository : IRepository<TBaseModel>
     {
-        protected TBaseRepository Repository { get; set; }
+        protected TBaseRepository _repository;
+        protected TBaseRepository Repository => _repository;
         public BaseService(TBaseRepository baseRepository)
         {
-            Repository = baseRepository;
+            _repository = baseRepository;
         }
 
         public TBaseModel FindFirst()
@@ -63,13 +64,13 @@ namespace FileDownLoadSystem.Core.BaseProvider
         }
         public virtual WebResponseContent AddEntity<TDetail>(SaveModel model)
         {
-            return Add<TBaseModel>(baseModel, null);
+            throw new   ();
         }
 
         public virtual WebResponseContent AddEntity<TDetail>(TBaseModel model,List<TDetail> details = null)
             where TDetail:class
         {
-
+            throw new NotImplementedException();
         }
         #endregion
 
